@@ -1,0 +1,609 @@
+/* ========================================
+   MALAYSIAN FRESHWATER FISH GUIDE - CSS
+   ======================================== */
+
+/* ROOT VARIABLES */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #0066cc;
+    --light-blue: #00aaff;
+    --accent-teal: #00cccc;
+    --dark-blue: #001a33;
+    --white: #ffffff;
+    --light-gray: #f5f7fa;
+    --shadow: 0 4px 15px rgba(0, 102, 204, 0.15);
+    --shadow-deep: 0 8px 25px rgba(0, 51, 102, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 50%, var(--light-blue) 100%);
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ========================================
+   BUBBLE ANIMATION BACKGROUND
+   ======================================== */
+.bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(100, 200, 255, 0.3));
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: rise linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        opacity: 0.8;
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) translateX(50px);
+    }
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 51, 102, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+/* Wave Animation Under Nav */
+.wave-animation {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,20 Q300,10 600,20 T1200,20' stroke='%2300aaff' fill='none' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+    background-size: 600px 40px;
+    animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 600px 0;
+    }
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+main {
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+}
+
+section {
+    margin: 0;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 102, 204, 0.9) 100%);
+    color: var(--white);
+    padding: 80px 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+.page-header {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.95) 0%, rgba(0, 102, 204, 0.95) 100%);
+    color: var(--white);
+    padding: 60px 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   FEATURED FISH SECTION
+   ======================================== */
+.featured-fish {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+.featured-fish h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* FISH GRID */
+.fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.fish-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: slideInUp 0.6s ease;
+}
+
+.fish-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-deep);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f8ff 100%);
+}
+
+.fish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.fish-card:hover .fish-image {
+    filter: brightness(1.1);
+}
+
+.fish-card h3 {
+    color: var(--primary-blue);
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.scientific-name {
+    padding: 0 1.5rem;
+    color: var(--secondary-blue);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.card-description {
+    padding: 0.5rem 1.5rem 1.5rem;
+    color: #555;
+    min-height: 60px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--secondary-blue), var(--light-blue));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.learn-more-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   CTA SECTIONS
+   ======================================== */
+.cta-section {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(0, 170, 255, 0.9) 100%);
+    color: var(--white);
+    padding: 60px 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    border-radius: 15px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button,
+.cta-button-large {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--white);
+    color: var(--primary-blue);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.cta-button:hover,
+.cta-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: var(--light-gray);
+}
+
+.cta-button-large {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   CONTENT SECTIONS
+   ======================================== */
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-section h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    color: var(--secondary-blue);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section h4 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-section p {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: block;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.info-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: var(--primary-blue);
+}
+
+.facts-list {
+    padding-left: 2rem;
+    color: #555;
+}
+
+.facts-list li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.facts-list strong {
+    color: var(--secondary-blue);
+}
+
+/* ========================================
+   COMPARISON AND BENEFIT CARDS
+   ======================================== */
+.comparison-card,
+.care-element,
+.benefit-card {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--light-blue);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.comparison-card:hover,
+.care-element:hover,
+.benefit-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.comparison-card h4,
+.care-element h4,
+.benefit-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.comparison-card p,
+.care-element p,
+.benefit-card p {
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+/* ========================================
+   FISH PROFILES
+   ======================================== */
+.fish-profile {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.fish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fish-header h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.care-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.care-badge.beginner {
+    background: #d4edda;
+    color: #155724;
+}
+
+.care-badge.intermediate {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.care-badge.advanced {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.fish-image-large {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-deep);
+    display: block;
+}
+
+.fish-details {
+    margin: 2rem 0;
+}
+
+.fish-details h3 {
+    color: var(--secondary-blue);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 0.5rem;
+}
+
+.fish-details p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   FISH NAVIGATION
+   ======================================== */
+.fish-nav {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 170, 255, 0.1) 0%, rgba(0, 204, 204, 0.1) 100%);
+    border-radius: 10px;
+    border-left: 5px solid var(--light-blue);
+}
+
+.fish-nav h3

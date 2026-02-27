@@ -2,132 +2,394 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Saltwater Fish Guide | Malaysian Fish Guide</title>
-    <meta name="description" content="Complete guide to popular saltwater aquarium fish including Clownfish, Blue Tang, Lionfish, Mandarinfish, Yellow Tang and Royal Gramma.">
-    <meta name="keywords" content="saltwater fish, marine aquarium fish, clownfish care, blue tang care, lionfish aquarium">
-    <meta name="author" content="Malaysian Fish Guide">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Saltwater Fish Guide">
-    <meta property="og:description" content="Discover popular marine aquarium fish and their care requirements.">
-    <meta property="og:type" content="website">
-
+    <meta name="description" content="Complete guide to 6 popular saltwater fish species including Clownfish, Blue Tang, Mandarin Fish, Firefish, Lionfish, and Seahorse. Includes care levels, tank requirements, diet, and lifespan.">
+    <meta name="keywords" content="Saltwater fish care, Clownfish, Blue Tang, Mandarin Fish, Firefish, Lionfish, Seahorse, marine aquarium, coral reef fish, saltwater tank setup">
+    <title>Saltwater Fish Species Guide - Marine Aquarium Care | Malaysian Fish Guide</title>
     <link rel="stylesheet" href="style.css">
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNQEFT45EZ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WNQEFT45EZ');
-    </script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Popular Saltwater Fish Species",
-      "description": "Marine aquarium fish care guide.",
-      "author": {
-        "@type": "Person",
-        "name": "Malaysian Fish Guide"
-      }
-    }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WNQEFT45EZ');
     </script>
 </head>
-
 <body>
-
-<header>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">🐟 Malaysian Fish Guide</div>
-        <ul class="nav-links">
+        <div class="nav-container">
+            <div class="logo">🐟 Malaysian Fish Guide</div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Fish</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Fish Species ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="freshwater.html">🌊 Freshwater Fish</a>
+                        <a href="saltwater.html" class="active">🌴 Saltwater Fish</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <ul class="mobile-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Fish</a></li>
             <li><a href="freshwater.html">Freshwater Fish</a></li>
-            <li><a href="saltwater.html" class="active" aria-current="page">Saltwater Fish</a></li>
+            <li><a href="saltwater.html">Saltwater Fish</a></li>
         </ul>
+
+        <div class="wave-animation"></div>
     </nav>
-</header>
 
-<section class="page-hero">
-    <h1>Popular Saltwater Aquarium Fish</h1>
-    <p>Explore colorful marine species for reef and saltwater aquariums.</p>
-</section>
+    <!-- Bubble Background -->
+    <div class="bubble-container"></div>
 
-<main class="fish-container">
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Popular Saltwater Fish Species</h1>
+            <p class="header-subtitle">Comprehensive care guides for marine aquarium enthusiasts</p>
+        </section>
 
-    <!-- Clownfish -->
-    <article class="fish-card">
-        <img src="images/clownfish.jpg" alt="Orange clownfish swimming in coral reef aquarium" loading="lazy">
-        <h2>Clownfish</h2>
-        <p><strong>Scientific Name:</strong> <em>Amphiprion ocellaris</em></p>
-        <p><strong>Care Level:</strong> Beginner</p>
-        <p><strong>Tank Size:</strong> Minimum 20 gallons</p>
-        <p>Clownfish are hardy and peaceful marine fish famous for their symbiotic relationship with sea anemones.</p>
-    </article>
+        <!-- Fish Navigation -->
+        <nav class="fish-nav">
+            <h3>Quick Navigation</h3>
+            <ul class="fish-links">
+                <li><a href="#clownfish">🐠 Clownfish</a></li>
+                <li><a href="#firefish">🔥 Firefish</a></li>
+                <li><a href="#bluetang">💙 Blue Tang</a></li>
+                <li><a href="#lionfish">👑 Lionfish</a></li>
+                <li><a href="#mandarinfish">🎨 Mandarin Fish</a></li>
+                <li><a href="#seahorse">🐴 Seahorse</a></li>
+            </ul>
+        </nav>
 
-    <!-- Blue Tang -->
-    <article class="fish-card">
-        <img src="images/blue-tang.jpg" alt="Blue tang fish with bright blue body and yellow tail" loading="lazy">
-        <h2>Blue Tang</h2>
-        <p><strong>Scientific Name:</strong> <em>Paracanthurus hepatus</em></p>
-        <p><strong>Care Level:</strong> Intermediate</p>
-        <p><strong>Tank Size:</strong> Minimum 75 gallons</p>
-        <p>Blue Tangs are active swimmers requiring larger tanks and stable marine water conditions.</p>
-    </article>
+        <!-- CLOWNFISH -->
+        <article id="clownfish" class="fish-profile">
+            <div class="fish-header">
+                <h2>Clownfish</h2>
+                <span class="care-badge beginner">Beginner</span>
+            </div>
+            
+            <img src="images/clownfish.jpg" alt="Orange and white striped Clownfish swimming among coral in saltwater aquarium" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Amphiprion ocellaris</em></p>
 
-    <!-- Lionfish -->
-    <article class="fish-card">
-        <img src="images/lionfish.jpg" alt="Lionfish displaying long venomous spines in saltwater tank" loading="lazy">
-        <h2>Lionfish</h2>
-        <p><strong>Scientific Name:</strong> <em>Pterois volitans</em></p>
-        <p><strong>Care Level:</strong> Advanced</p>
-        <p><strong>Tank Size:</strong> Minimum 55 gallons</p>
-        <p>Lionfish are striking predators with venomous spines and require experienced marine aquarists.</p>
-    </article>
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 20 gallons (75 liters) for pair</li>
+                    <li><strong>Water Temperature:</strong> 24-28°C (75-82°F)</li>
+                    <li><strong>pH Level:</strong> 8.0-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 6-10 years in captivity</li>
+                    <li><strong>Diet:</strong> Omnivorous - pellets, flakes, live food</li>
+                    <li><strong>Compatibility:</strong> Peaceful, excellent for beginners</li>
+                </ul>
+            </section>
 
-    <!-- Mandarinfish -->
-    <article class="fish-card">
-        <img src="images/mandarinfish.jpg" alt="Colorful mandarinfish with psychedelic patterns" loading="lazy">
-        <h2>Mandarinfish</h2>
-        <p><strong>Scientific Name:</strong> <em>Synchiropus splendidus</em></p>
-        <p><strong>Care Level:</strong> Advanced</p>
-        <p><strong>Tank Size:</strong> Minimum 30 gallons</p>
-        <p>Mandarinfish are beautifully patterned but require mature reef tanks with live copepods.</p>
-    </article>
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Clownfish are omnivorous and will eat a variety of foods including high-quality marine pellets, frozen mysis shrimp, and brine shrimp. Feed twice daily with small portions. They will also nibble algae and zooplankton in the tank. Ensure diet includes both meaty foods and vegetable matter for balanced nutrition.</p>
+            </section>
 
-    <!-- Yellow Tang -->
-    <article class="fish-card">
-        <img src="images/yellow-tang.jpg" alt="Bright yellow tang fish swimming in reef aquarium" loading="lazy">
-        <h2>Yellow Tang</h2>
-        <p><strong>Scientific Name:</strong> <em>Zebrasoma flavescens</em></p>
-        <p><strong>Care Level:</strong> Intermediate</p>
-        <p><strong>Tank Size:</strong> Minimum 75 gallons</p>
-        <p>Yellow Tangs are algae grazers that help maintain reef tank cleanliness.</p>
-    </article>
+            <section class="fish-details">
+                <h3>Symbiotic Relationship with Anemones</h3>
+                <p>In the wild, clownfish have a famous symbiotic relationship with sea anemones. The fish are immune to the anemone's sting and receive protection, while the clownfish help feed the anemone. In captivity, they don't require anemones to survive, but appreciate them. Ensure any anemone is properly acclimated and fed.</p>
+            </section>
 
-    <!-- Royal Gramma -->
-    <article class="fish-card">
-        <img src="images/royal-gramma.jpg" alt="Royal gramma fish with purple and yellow coloration" loading="lazy">
-        <h2>Royal Gramma</h2>
-        <p><strong>Scientific Name:</strong> <em>Gramma loreto</em></p>
-        <p><strong>Care Level:</strong> Beginner</p>
-        <p><strong>Tank Size:</strong> Minimum 30 gallons</p>
-        <p>Royal Grammas are peaceful reef fish with vibrant purple and yellow coloration.</p>
-    </article>
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Clownfish</h3>
+                <ol class="facts-list">
+                    <li><strong>Sex Change Ability:</strong> All clownfish are born male. In a group, the largest and most dominant fish becomes female. If the female dies, the dominant male undergoes a sex change to become female, with the next male in hierarchy becoming the breeding male.</li>
+                    <li><strong>Famous from Finding Nemo:</strong> Clownfish gained worldwide popularity after the 2003 movie "Finding Nemo." Unfortunately, this led to massive overharvesting from wild reefs. Most aquarium clownfish are now captive-bred to protect wild populations.</li>
+                    <li><strong>Immunity to Stings:</strong> Clownfish have a special mucus coating that protects them from anemone tentacles. Scientists believe this is created through a gradual acclimation process where the fish slowly familiarizes itself with the anemone's sting.</li>
+                </ol>
+            </section>
+        </article>
 
-</main>
+        <!-- FIREFISH -->
+        <article id="firefish" class="fish-profile">
+            <div class="fish-header">
+                <h2>Firefish</h2>
+                <span class="care-badge intermediate">Intermediate</span>
+            </div>
+            
+            <img src="images/firefish.jpg" alt="Red and white striped Firefish darting across sandy saltwater aquarium bottom" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Nemateleotris magnifica</em></p>
 
-<footer>
-    <p>📧 Contact: malaysianfishguide@email.com</p>
-    <p>© 2026 Malaysian Fish Guide. All Rights Reserved.</p>
-</footer>
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 30 gallons (113 liters)</li>
+                    <li><strong>Water Temperature:</strong> 24-27°C (75-81°F)</li>
+                    <li><strong>pH Level:</strong> 8.1-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 4-8 years</li>
+                    <li><strong>Diet:</strong> Carnivorous - mysis shrimp, copepods, pellets</li>
+                    <li><strong>Compatibility:</strong> Generally peaceful but keep only one per tank</li>
+                </ul>
+            </section>
 
-<script src="script.js"></script>
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Firefish are carnivorous and prefer small meaty foods. Feed high-quality frozen or live mysis shrimp, copepods, and brine shrimp 2-3 times daily. They may accept high-quality marine pellets but prefer live or frozen food. In well-established tanks with natural food, they can supplement by hunting small organisms in the sand and rock.</p>
+            </section>
 
+            <section class="fish-details">
+                <h3>Behavior and Tank Requirements</h3>
+                <p>Firefish are famous for their rapid darting movements and tendency to hide in burrows. Provide sandy substrate where they can dig and create shelter. They're extremely fast swimmers and may injure themselves against glass, so the tank should have plenty of hiding spots and open swimming areas. They're generally peaceful but aggressive toward other firefish.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Firefish</h3>
+                <ol class="facts-list">
+                    <li><strong>Rapid Movement:</strong> Firefish can accelerate from 0 to 60 mph in fractions of a second, making them some of the fastest fish in the ocean relative to their body size. This explosive speed helps them escape predators in their natural sandy habitat.</li>
+                    <li><strong>Symbiotic Burrow Sharing:</strong> In the wild, firefish often share burrows with pistol shrimp in a mutually beneficial relationship. The shrimp digs and maintains the burrow while the firefish watches for predators, alerting the shrimp with tail signals.</li>
+                    <li><strong>Goby-Like Behavior:</strong> Despite being classified differently, firefish exhibit behaviors similar to gobies, including their burrow-dwelling tendencies. They're one of the few fish that will readily accept captive-bred surroundings and create territory in a tank.</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- BLUE TANG -->
+        <article id="bluetang" class="fish-profile">
+            <div class="fish-header">
+                <h2>Blue Tang</h2>
+                <span class="care-badge intermediate">Intermediate</span>
+            </div>
+            
+            <img src="images/blue-tang.jpg" alt="Bright electric blue Blue Tang fish swimming in saltwater coral reef environment" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Paracanthurus hepatus</em></p>
+
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 75 gallons (283 liters), larger preferred</li>
+                    <li><strong>Water Temperature:</strong> 24-26°C (75-79°F)</li>
+                    <li><strong>pH Level:</strong> 8.1-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 15-20 years in captivity</li>
+                    <li><strong>Diet:</strong> Omnivorous - algae, pellets, live food</li>
+                    <li><strong>Compatibility:</strong> Semi-aggressive, can be territorial</li>
+                </ul>
+            </section>
+
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Blue Tangs are primarily herbivorous and require plenty of algae and vegetable matter. Feed dried seaweed, algae pellets, and spirulina supplemented with small meaty foods. They grazer throughout the day in nature, so frequent small feedings work better than one large feeding. A well-established tank with natural algae growth helps maintain their health.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Tank Environment and Behavior</h3>
+                <p>Blue Tangs require large, open tanks with plenty of swimming space. They're strong swimmers that need room to roam. Provide rockwork and algae-covered surfaces for grazing. They may become aggressive toward other tangs and similar-sized fish as they mature. They're sensitive to water quality changes and require excellent filtration and stable parameters.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Blue Tang</h3>
+                <ol class="facts-list">
+                    <li><strong>Toxic Defense Mechanism:</strong> Blue Tangs have venomous spines near their tail that they use as a defense mechanism when threatened. These spines can cause painful injuries to predators and even humans, so handle with extreme care during tank maintenance.</li>
+                    <li><strong>Movie Fame:</strong> The character Dory from the movies "Finding Nemo" and "Finding Dory" is a Blue Tang. This led to massive increases in demand for captive-bred Blue Tangs, making them one of the most popular saltwater aquarium fish despite their challenging care requirements.</li>
+                    <li><strong>Algae Grazer Specialist:</strong> In the wild, Blue Tangs spend most of their day grazing on algae and small organisms on reef surfaces. A single Blue Tang can consume over 3 pounds of algae per year, making them important for reef ecosystem health.</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- LIONFISH -->
+        <article id="lionfish" class="fish-profile">
+            <div class="fish-header">
+                <h2>Lionfish</h2>
+                <span class="care-badge advanced">Advanced</span>
+            </div>
+            
+            <img src="images/lionfish.jpg" alt="Red and white striped Lionfish with elaborate pectoral fins in saltwater aquarium" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Pterois</em></p>
+
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 50 gallons (189 liters), 75+ gallon recommended</li>
+                    <li><strong>Water Temperature:</strong> 24-26°C (75-79°F)</li>
+                    <li><strong>pH Level:</strong> 8.1-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 10-15 years in captivity</li>
+                    <li><strong>Diet:</strong> Carnivorous - live or frozen fish</li>
+                    <li><strong>Compatibility:</strong> Generally solitary, cannot be housed with small fish</li>
+                </ul>
+            </section>
+
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Lionfish are strictly carnivorous predators that require live or recently frozen fish. Feed feeder fish, silversides, or other appropriate-sized fish 2-3 times weekly. Do not overfeed as they can become obese. Some specimens may accept prepared foods over time, but live food is preferred. They're ambush predators that hunt actively in the evening.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Venomous Spines and Safety</h3>
+                <p>Lionfish have highly venomous spines that can cause severe pain and swelling in humans. Handle with extreme care during tank maintenance using thick gloves and nets. The venom is a defense mechanism and not used for hunting. Never stick hands directly into the tank. In case of sting, seek immediate medical attention. Despite the danger, they're generally docile in captivity.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Lionfish</h3>
+                <ol class="facts-list">
+                    <li><strong>Venomous Predator:</strong> Lionfish are one of the few venomous fish in the ocean. They use their venom-tipped spines purely as a defense mechanism, not for hunting. Some species can produce enough venom to kill a human, making them one of the most dangerous reef fish.</li>
+                    <li><strong>Invasive Species Problem:</strong> Lionfish are native to Indo-Pacific waters but have become an invasive species in the Atlantic Ocean and Caribbean. They have no natural predators and eat enormous quantities of native fish, causing significant ecological damage to invaded reef systems.</li>
+                    <li><strong>Elegant Hunting Style:</strong> Lionfish are ambush predators that use their elaborate fins to herd and trap prey fish into corners. Once prey is cornered, they quickly open their large mouths and create suction to swallow the fish whole in a fraction of a second.</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- MANDARIN FISH -->
+        <article id="mandarinfish" class="fish-profile">
+            <div class="fish-header">
+                <h2>Mandarin Fish</h2>
+                <span class="care-badge advanced">Advanced</span>
+            </div>
+            
+            <img src="images/mandarin-fish.jpg" alt="Colorful patterned Mandarin fish with blue, orange and green patterns in saltwater aquarium" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Synchiropus splendidus</em></p>
+
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 20 gallons (75 liters) for established aquarium</li>
+                    <li><strong>Water Temperature:</strong> 24-26°C (75-79°F)</li>
+                    <li><strong>pH Level:</strong> 8.1-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 2-5 years (challenging in captivity)</li>
+                    <li><strong>Diet:</strong> Carnivorous - tiny live foods only</li>
+                    <li><strong>Compatibility:</strong> Peaceful but require specific conditions</li>
+                </ul>
+            </section>
+
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Mandarin fish are extremely challenging to feed as they only eat tiny live foods including copepods, amphipods, and small mysis shrimp. They will not typically accept prepared foods. A well-established tank with abundant natural zooplankton is essential. Many beginners fail to keep these fish because they starve in clean aquariums without sufficient live food populations.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Specialized Tank Requirements</h3>
+                <p>Mandarin fish require mature tanks (at least 6+ months old) with abundant live food. They're bottom-dwellers that spend most of their day picking through sand and rocks searching for tiny organisms. The tank should be well-established with a healthy population of copepods and amphipods. Frequent water changes that disrupt the zooplankton population can be detrimental to their survival.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Mandarin Fish</h3>
+                <ol class="facts-list">
+                    <li><strong>Most Colorful Fish in the Ocean:</strong> Mandarin fish are famous for being one of the most stunningly colored fish in the world. Their intricate patterns include electric blues, oranges, greens, and yellows arranged in geometric designs. Each individual has unique patterning, much like fingerprints in humans.</li>
+                    <li><strong>Synchronized Mating Dance:</strong> In the wild, mandarin fish perform an elaborate mating dance at dusk. A pair will synchronize their movements and rise together into the water column to spawn, creating a beautiful underwater ballet. This behavior is rarely observed in captivity.</li>
+                    <li><strong>Challenge for Aquarists:</strong> Mandarin fish have a reputation for being the hardest fish to keep alive in captivity. While their striking beauty makes them highly desirable, their strict dietary requirements and sensitivity to tank conditions make them suitable only for advanced aquarists with established reef tanks.</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- SEAHORSE -->
+        <article id="seahorse" class="fish-profile">
+            <div class="fish-header">
+                <h2>Seahorse</h2>
+                <span class="care-badge advanced">Advanced</span>
+            </div>
+            
+            <img src="images/seahorse.jpg" alt="Yellow Seahorse clinging to seagrass in calm saltwater aquarium" class="fish-image-large">
+            
+            <p class="scientific-name">Scientific Name: <em>Hippocampus</em></p>
+
+            <section class="fish-details">
+                <h3>Basic Care Information</h3>
+                <ul class="info-list">
+                    <li><strong>Tank Size:</strong> Minimum 40 gallons (150 liters) for pair</li>
+                    <li><strong>Water Temperature:</strong> 23-26°C (73-79°F)</li>
+                    <li><strong>pH Level:</strong> 8.1-8.3</li>
+                    <li><strong>Salinity:</strong> 1.020-1.025 specific gravity</li>
+                    <li><strong>Lifespan:</strong> 4-6 years in captivity</li>
+                    <li><strong>Diet:</strong> Carnivorous - live mysis shrimp, copepods</li>
+                    <li><strong>Compatibility:</strong> Keep with peaceful fish only, mate for life</li>
+                </ul>
+            </section>
+
+            <section class="fish-details">
+                <h3>Diet and Feeding</h3>
+                <p>Seahorses are extremely slow feeders that require live food. They primarily eat tiny copepods and live mysis shrimp. They must be hand-fed or have abundant populations of live zooplankton. Feed 2-3 times daily in small amounts. They cannot compete with aggressive fish for food and will starve if placed in tanks with faster-feeding fish species.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Tank Environment and Behavior</h3>
+                <p>Seahorses require calm, low-flow tanks with plenty of seagrass, gorgonians, or other holdfast plants. They use their prehensile tail to anchor themselves and move very slowly through the water. The tank should have minimal current to prevent exhaustion. They prefer to stay in one area, making them poor swimmers that need protected habitats. Seahorses mate for life and often stay together.</p>
+            </section>
+
+            <section class="fish-details">
+                <h3>Three Fascinating Facts About Seahorse</h3>
+                <ol class="facts-list">
+                    <li><strong>Male Pregnancy:</strong> Seahorses are the only fish species where the male becomes pregnant. The female deposits her eggs into the male's pouch where he fertilizes and incubates them until they're fully developed, then releases hundreds of tiny, independent seahorse fry.</li>
+                    <li><strong>Monogamous Partners:</strong> Seahorses are highly unusual in the animal kingdom for being monogamous. Mated pairs stay together for extended periods and can recognize each other individually. They often perform synchronized swimming movements as a bonding ritual.</li>
+                    <li><strong>Conservation Concern:</strong> Seahorse populations worldwide are threatened by habitat loss, coastal development, and illegal collection for traditional medicine. Many governments now protect seahorse species, and most aquarium specimens are now farmed sustainably to protect wild populations.</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- Conclusion Section -->
+        <section class="cta-section reveal">
+            <h2>Ready to Set Up Your Saltwater Aquarium?</h2>
+            <p>Each of these saltwater fish has unique requirements and challenges. Choose species that match your experience level and tank capacity for the best success.</p>
+            <a href="about.html" class="cta-button-large">Learn About Aquarium Care</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Your comprehensive resource for freshwater and saltwater aquarium care and fish species information.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Fish</a></li>
+                    <li><a href="freshwater.html">Freshwater</a></li>
+                    <li><a href="saltwater.html">Saltwater</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:info@malayfishguide.com">info@malayfishguide.com</a></p>
+                <p>Phone: +60 3 1234 5678</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Malaysian Freshwater & Saltwater Fish Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

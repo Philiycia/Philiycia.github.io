@@ -1,5 +1,5 @@
 /* ========================================
-   MALAYSIAN FRESHWATER FISH GUIDE - CSS
+   MALAYSIAN FISH GUIDE - RESPONSIVE CSS
    ======================================== */
 
 /* ROOT VARIABLES */
@@ -80,7 +80,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 51, 102, 0.95);
+    background: rgba(0, 51, 102, 0.98);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -93,6 +93,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -100,12 +101,15 @@ body {
     font-weight: bold;
     color: var(--white);
     text-decoration: none;
+    white-space: nowrap;
 }
 
+/* DESKTOP NAVIGATION */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -119,6 +123,114 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 51, 102, 0.99);
+    min-width: 200px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    box-shadow: var(--shadow-deep);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* MOBILE NAVIGATION */
+.mobile-nav {
+    display: none;
+    list-style: none;
+    background: rgba(0, 51, 102, 0.99);
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mobile-nav a:hover {
     background: var(--light-blue);
     color: var(--dark-blue);
 }
@@ -175,12 +287,19 @@ section {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @keyframes fadeInDown {
@@ -222,39 +341,39 @@ section {
 }
 
 .header-subtitle {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     opacity: 0.95;
 }
 
 /* ========================================
-   FEATURED FISH SECTION
+   FEATURED SECTIONS
    ======================================== */
-.featured-fish {
+.featured-section {
     max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 0 2rem;
 }
 
-.featured-fish h2 {
-    font-size: 2.5rem;
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
     color: var(--primary-blue);
     margin-bottom: 0.5rem;
     text-align: center;
 }
 
-.section-description {
+.section-header p {
     text-align: center;
     color: #666;
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* FISH GRID */
 .fish-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .fish-card {
@@ -274,7 +393,7 @@ section {
 
 .fish-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     display: block;
     transition: var(--transition);
@@ -286,324 +405,4 @@ section {
 
 .fish-card h3 {
     color: var(--primary-blue);
-    padding: 1.5rem 1.5rem 0.5rem;
-    font-size: 1.5rem;
-}
-
-.scientific-name {
-    padding: 0 1.5rem;
-    color: var(--secondary-blue);
-    font-style: italic;
-    font-size: 0.95rem;
-}
-
-.card-description {
-    padding: 0.5rem 1.5rem 1.5rem;
-    color: #555;
-    min-height: 60px;
-}
-
-.learn-more-btn {
-    display: inline-block;
-    margin: 0 1.5rem 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, var(--secondary-blue), var(--light-blue));
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 8px;
-    transition: var(--transition);
-    font-weight: 600;
-}
-
-.learn-more-btn:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================================
-   CTA SECTIONS
-   ======================================== */
-.cta-section {
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(0, 170, 255, 0.9) 100%);
-    color: var(--white);
-    padding: 60px 2rem;
-    text-align: center;
-    margin: 3rem 0;
-    border-radius: 15px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.cta-section p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-button,
-.cta-button-large {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: var(--white);
-    color: var(--primary-blue);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: var(--transition);
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-}
-
-.cta-button:hover,
-.cta-button-large:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    background: var(--light-gray);
-}
-
-.cta-button-large {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.1rem;
-}
-
-/* ========================================
-   CONTENT SECTIONS
-   ======================================== */
-.content-section {
-    max-width: 1000px;
-    margin: 0 auto 3rem;
-    padding: 0 2rem;
-    background: var(--white);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.content-section h2 {
-    color: var(--primary-blue);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--light-blue);
-    padding-bottom: 0.5rem;
-}
-
-.content-section h3 {
-    color: var(--secondary-blue);
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.content-section h4 {
-    color: var(--primary-blue);
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.content-section p {
-    color: #444;
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
-.section-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 1.5rem auto;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    display: block;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.info-list li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
-    color: #555;
-}
-
-.info-list li:last-child {
-    border-bottom: none;
-}
-
-.info-list strong {
-    color: var(--primary-blue);
-}
-
-.facts-list {
-    padding-left: 2rem;
-    color: #555;
-}
-
-.facts-list li {
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
-.facts-list strong {
-    color: var(--secondary-blue);
-}
-
-/* ========================================
-   COMPARISON AND BENEFIT CARDS
-   ======================================== */
-.comparison-card,
-.care-element,
-.benefit-card {
-    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-left: 5px solid var(--light-blue);
-    border-radius: 8px;
-    transition: var(--transition);
-}
-
-.comparison-card:hover,
-.care-element:hover,
-.benefit-card:hover {
-    transform: translateX(5px);
-    box-shadow: var(--shadow);
-}
-
-.comparison-card h4,
-.care-element h4,
-.benefit-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 0.5rem;
-}
-
-.comparison-card p,
-.care-element p,
-.benefit-card p {
-    color: #555;
-    margin: 0.5rem 0;
-}
-
-/* ========================================
-   FISH PROFILES
-   ======================================== */
-.fish-profile {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-}
-
-.fish-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.fish-header h2 {
-    color: var(--primary-blue);
-    font-size: 2rem;
-    margin: 0;
-}
-
-.care-badge {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-.care-badge.beginner {
-    background: #d4edda;
-    color: #155724;
-}
-
-.care-badge.intermediate {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.care-badge.advanced {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.fish-image-large {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin: 1.5rem auto;
-    border-radius: 10px;
-    box-shadow: var(--shadow-deep);
-    display: block;
-}
-
-.fish-details {
-    margin: 2rem 0;
-}
-
-.fish-details h3 {
-    color: var(--secondary-blue);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--light-blue);
-    padding-bottom: 0.5rem;
-}
-
-.fish-details p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-/* ========================================
-   FISH NAVIGATION
-   ======================================== */
-.fish-nav {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(135deg, rgba(0, 170, 255, 0.1) 0%, rgba(0, 204, 204, 0.1) 100%);
-    border-radius: 10px;
-    border-left: 5px solid var(--light-blue);
-}
-
-.fish-nav h3
+    padding: 1.5rem 1.5rem 0.5

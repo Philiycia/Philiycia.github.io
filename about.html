@@ -5,29 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about freshwater fish, the differences between freshwater and saltwater fish, and proper aquarium care techniques.">
     <meta name="keywords" content="freshwater fish, saltwater fish, aquarium care, fish tank setup, fish biology, aquatic environment">
-    <title>About Freshwater Fish - Care Guide and Fish Biology | Malaysian Fish Guide</title>
+    <title>About Fish - Freshwater & Saltwater Guide | Malaysian Fish Guide</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Analytics Placeholder -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNQEFT45EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WNQEFT45EZ');
-</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WNQEFT45EZ');
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">🐟 Malaysian Fish Guide</div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Desktop Navigation -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Fish</a></li>
-                <li><a href="freshwater.html">Freshwater Species</a></li>
-                <li><a href="saltwater.html">Saltwater Species</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Fish Species ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="freshwater.html">🌊 Freshwater Fish</a>
+                        <a href="saltwater.html">🌴 Saltwater Fish</a>
+                    </div>
+                </li>
             </ul>
         </div>
+
+        <!-- Mobile Navigation -->
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Fish</a></li>
+            <li><a href="freshwater.html">Freshwater Fish</a></li>
+            <li><a href="saltwater.html">Saltwater Fish</a></li>
+        </ul>
+
         <div class="wave-animation"></div>
     </nav>
 
@@ -38,22 +61,22 @@
     <main>
         <!-- Page Header -->
         <section class="page-header">
-            <h1>About Freshwater Fish</h1>
+            <h1>About Fish and Aquarium Care</h1>
             <p class="header-subtitle">Understanding aquatic life and proper fish care</p>
         </section>
 
-        <!-- What are Freshwater Fish -->
-        <section class="content-section">
-            <h2>What Are Freshwater Fish?</h2>
-            <img src="images/freshwater-habitat.jpg" alt="Natural freshwater stream habitat with various fish species and aquatic plants" class="section-image">
-            <p>Freshwater fish are aquatic animals that live in water with low salt content, typically found in rivers, lakes, streams, and ponds. These fish have adapted to thrive in environments where the water salinity is less than 0.5 parts per thousand, making them distinct from their saltwater counterparts.</p>
-            <p>Malaysia's tropical freshwater systems are home to numerous indigenous fish species. These habitats provide ideal conditions for many popular aquarium fish species, which naturally originate from tropical regions similar to Malaysia's climate.</p>
+        <!-- What are Fish -->
+        <section class="content-section reveal">
+            <h2>What Are Fish?</h2>
+            <img src="images/fish-types.jpg" alt="Variety of colorful fish species in different aquatic environments" class="section-image">
+            <p>Fish are aquatic vertebrate animals that are cold-blooded, have gills for breathing underwater, fins for movement, and scales for protection. They are found in virtually every aquatic environment on Earth, from freshwater streams to the deepest ocean trenches.</p>
+            <p>Malaysia's position in the tropical region means it hosts incredible biodiversity of both freshwater and saltwater fish species. These fish have adapted to their specific environments over millions of years, making them unique and fascinating subjects for aquarium keeping.</p>
         </section>
 
         <!-- Freshwater vs Saltwater -->
-        <section class="content-section">
+        <section class="content-section reveal">
             <h2>Freshwater Fish vs Saltwater Fish</h2>
-            <img src="images/fish-comparison.jpg" alt="Side-by-side comparison of freshwater and saltwater fish species in their respective habitats" class="section-image">
+            <img src="images/water-types.jpg" alt="Side-by-side comparison of freshwater and saltwater aquatic environments" class="section-image">
             
             <h3>Key Differences</h3>
             <article class="comparison-card">
@@ -82,9 +105,9 @@
         </section>
 
         <!-- Aquarium Care Importance -->
-        <section class="content-section">
+        <section class="content-section reveal">
             <h2>The Importance of Proper Aquarium Care</h2>
-            <img src="images/aquarium-setup.jpg" alt="Well-maintained freshwater aquarium with plants, rocks, and healthy fish swimming" class="section-image">
+            <img src="images/care-tank.jpg" alt="Well-maintained aquarium with plants, rocks, and healthy fish swimming" class="section-image">
             
             <h3>Why Proper Care Matters</h3>
             <p>Maintaining proper aquarium conditions is essential for the health and longevity of your fish. Poor water conditions can lead to stress, disease, and premature death of aquatic life.</p>
@@ -92,112 +115,117 @@
             <h3>Essential Care Elements</h3>
             <article class="care-element">
                 <h4>🌡️ Temperature Control</h4>
-                <p>Most tropical freshwater fish require temperatures between 24-28°C. Consistent temperature is crucial for fish metabolism and behavior. Sudden fluctuations can cause stress and illness.</p>
+                <p>Most tropical fish require stable temperatures. Consistent temperature is crucial for fish metabolism and behavior. Sudden fluctuations can cause stress and illness.</p>
             </article>
 
             <article class="care-element">
                 <h4>💨 Filtration and Aeration</h4>
-                <p>A proper filtration system removes waste products and maintains oxygen levels. Mechanical, biological, and chemical filtration work together to keep water clean and safe for fish.</p>
+                <p>A proper filtration system removes waste products and maintains oxygen levels. Mechanical, biological, and chemical filtration work together to keep water clean and safe.</p>
             </article>
 
             <article class="care-element">
                 <h4>🧪 Water Quality Monitoring</h4>
-                <p>Regular testing of pH, ammonia, nitrite, and nitrate levels is essential. Most freshwater fish prefer a pH between 6.5-7.5, with zero ammonia and nitrite levels.</p>
+                <p>Regular testing of pH, ammonia, nitrite, and nitrate levels is essential. Proper water parameters ensure fish health and prevent disease.</p>
             </article>
 
             <article class="care-element">
                 <h4>🌱 Tank Decorations and Plants</h4>
-                <p>Live plants provide oxygen, absorb excess nutrients, and create natural hiding spaces that reduce stress. Decorations provide enrichment and territory for fish behavior.</p>
+                <p>Live plants provide oxygen, absorb excess nutrients, and create natural hiding spaces. Decorations provide enrichment and reduce stress.</p>
             </article>
 
             <article class="care-element">
                 <h4>🍖 Proper Nutrition</h4>
-                <p>Different fish species require different diets. Quality commercial fish food, supplemented with varied nutrition, ensures proper growth and coloration.</p>
+                <p>Different fish species require different diets. Quality commercial fish food supplemented with varied nutrition ensures proper growth.</p>
             </article>
 
             <article class="care-element">
                 <h4>🔄 Regular Maintenance</h4>
-                <p>Weekly water changes (20-30%), filter cleaning, and tank cleaning prevent the buildup of harmful substances and maintain optimal living conditions.</p>
+                <p>Weekly water changes, filter cleaning, and tank cleaning prevent harmful substance buildup and maintain optimal conditions.</p>
             </article>
         </section>
 
         <!-- Benefits of Fish Keeping -->
-        <section class="content-section">
-            <h2>Benefits of Keeping Freshwater Fish</h2>
-            <img src="images/aquarium-benefits.jpg" alt="Person relaxing while watching peaceful fish in a home aquarium" class="section-image">
+        <section class="content-section reveal">
+            <h2>Benefits of Fish Keeping</h2>
+            <img src="images/aquarium-relax.jpg" alt="Person enjoying peaceful fish in a beautiful home aquarium" class="section-image">
             
             <article class="benefit-card">
                 <h3>🧘 Stress Relief and Mental Health</h3>
-                <p>Watching fish has been scientifically proven to reduce stress and anxiety. The calm, repetitive movements of fish promote relaxation and meditation-like states.</p>
+                <p>Watching fish has been scientifically proven to reduce stress and anxiety. The calm movements promote relaxation and meditation.</p>
             </article>
 
             <article class="benefit-card">
                 <h3>🎓 Educational Value</h3>
-                <p>Maintaining an aquarium teaches responsibility, biology, chemistry, and ecology. It's an excellent learning tool for children and adults interested in aquatic ecosystems.</p>
+                <p>Aquarium keeping teaches biology, chemistry, and ecology. It's an excellent learning tool for all ages.</p>
             </article>
 
             <article class="benefit-card">
                 <h3>🏡 Home Aesthetic</h3>
-                <p>A well-designed aquarium serves as living artwork that enhances home décor. The combination of plants, rocks, and colorful fish creates a visually appealing focal point.</p>
+                <p>A well-designed aquarium enhances home décor and creates a beautiful focal point.</p>
             </article>
 
             <article class="benefit-card">
                 <h3>🐟 Connection with Nature</h3>
-                <p>Keeping fish creates a direct connection with aquatic nature, promoting environmental awareness and appreciation for biodiversity in natural ecosystems.</p>
+                <p>Fish keeping creates a direct connection with aquatic nature and promotes environmental awareness.</p>
             </article>
 
             <article class="benefit-card">
                 <h3>💪 Responsibility and Routine</h3>
-                <p>Daily fish care tasks establish healthy routines and teach responsibility. Ensuring fish health creates a sense of purpose and accomplishment.</p>
+                <p>Daily fish care tasks establish healthy routines and teach responsibility.</p>
             </article>
 
             <article class="benefit-card">
                 <h3>🤝 Social Connection</h3>
-                <p>Fish keeping communities and clubs provide opportunities for social interaction, knowledge sharing, and building friendships with fellow enthusiasts.</p>
+                <p>Fish keeping communities provide opportunities for knowledge sharing and building friendships with fellow enthusiasts.</p>
             </article>
         </section>
 
         <!-- Call to Action -->
-        <section class="cta-section">
-            <h2>Ready to Learn More About Specific Fish?</h2>
-            <p>Explore detailed care guides and fascinating facts about popular Malaysian freshwater fish species.</p>
-            <a href="freshwater.html" class="cta-button-large">View Fish Species Guide</a>
+        <section class="cta-section reveal">
+            <h2>Ready to Learn More?</h2>
+            <p>Explore detailed care guides and fascinating facts about popular fish species.</p>
+            <a href="freshwater.html" class="cta-button-large">Explore Freshwater Fish</a>
+            <a href="saltwater.html" class="cta-button-large" style="margin-left: 1rem;">Explore Saltwater Fish</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <h3>Malaysian Freshwater Fish Guide</h3>
-            <p class="footer-description">Your comprehensive resource for freshwater aquarium care and fish species information.</p>
-            
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>Email: <a href="mailto:info@malayfishguide.com">info@malayfishguide.com</a></p>
-                <p>Phone: +60 3 1234 5678</p>
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Your comprehensive resource for freshwater and saltwater aquarium care and fish species information.</p>
             </div>
 
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook" title="Facebook">f</a>
-                    <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-                    <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
-                </div>
-            </div>
-
-            <div class="footer-section">
+            <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Fish</a></li>
-                    <li><a href="freshwater.html">Fish Species</a></li>
+                    <li><a href="freshwater.html">Freshwater</a></li>
+                    <li><a href="saltwater.html">Saltwater</a></li>
                 </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:info@malayfishguide.com">info@malayfishguide.com</a></p>
+                <p>Phone: +60 3 1234 5678</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
             </div>
         </div>
 
+        <div class="footer-divider"></div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Malaysian Freshwater Fish Guide. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+            <p>&copy; 2026 Malaysian Freshwater & Saltwater Fish Guide. All rights reserved.</p>
         </div>
     </footer>
 

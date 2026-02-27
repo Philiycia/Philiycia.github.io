@@ -1,7 +1,21 @@
-/* =============================
-   GLOBAL STYLES
-============================= */
+/* ========================================
+   MALAYSIAN FISH GUIDE - COMPLETE CSS
+   ======================================== */
 
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --primary: #003366;
+    --secondary: #0066cc;
+    --accent: #00cccc;
+    --light: #f4f9ff;
+    --white: #ffffff;
+    --dark: #222;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    --radius: 14px;
+    --transition: all 0.3s ease;
+}
+
+/* ===== GLOBAL ===== */
 * {
     margin: 0;
     padding: 0;
@@ -14,289 +28,274 @@ html {
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom, #e6f7ff, #f0fbff);
-    color: #033047;
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: var(--dark);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* =============================
-   NAVBAR
-============================= */
+/* ===== CONTAINER ===== */
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
+/* ========================================
+   NAVBAR
+======================================== */
 .navbar {
-    background: linear-gradient(to right, #012a4a, #014f86);
-    color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
+    background: rgba(0, 51, 102, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 30px;
 }
 
 .logo {
+    color: var(--white);
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: none;
-    color: white;
 }
 
-.logo:hover {
-    color: #4dd0e1;
-}
-
-/* Desktop Nav */
-
+/* Desktop nav */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links li {
-    position: relative;
+    gap: 25px;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: white;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-    color: #4dd0e1;
+.nav-links .active {
+    color: var(--accent);
 }
 
 /* Dropdown */
+.dropdown {
+    position: relative;
+}
 
 .dropdown-menu {
     position: absolute;
-    top: 35px;
+    background: var(--white);
+    top: 30px;
     left: 0;
-    background: #023e8a;
     display: none;
     flex-direction: column;
-    min-width: 180px;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .dropdown-menu a {
-    padding: 0.7rem 1rem;
-    display: block;
+    padding: 10px 15px;
+    color: var(--dark);
 }
 
 .dropdown:hover .dropdown-menu {
     display: flex;
 }
 
-/* =============================
-   HAMBURGER MENU
-============================= */
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-}
-
-/* Mobile Nav */
-
-.mobile-nav {
-    display: none;
-    flex-direction: column;
-    background: #012a4a;
-    width: 100%;
-}
-
-.mobile-nav li {
-    list-style: none;
-}
-
-.mobile-nav a {
-    display: block;
-    padding: 1rem;
-    color: white;
-    text-decoration: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-nav a:hover {
-    background: #014f86;
-}
-
-.mobile-nav.active {
+/* ========================================
+   HERO SECTION
+======================================== */
+.hero {
+    height: 100vh;
     display: flex;
-}
-
-/* =============================
-   PAGE HEADER
-============================= */
-
-.page-header {
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 4rem 1rem 2rem;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.header-subtitle {
-    font-size: 1.1rem;
-    color: #055a8c;
-}
-
-/* =============================
-   CONTENT SECTIONS
-============================= */
-
-.content-section {
-    max-width: 1100px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
-
-.section-image {
-    width: 100%;
-    border-radius: 12px;
-    margin: 1rem 0 2rem;
-}
-
-/* Cards */
-
-.comparison-card,
-.care-element,
-.benefit-card {
-    background: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.comparison-card:hover,
-.care-element:hover,
-.benefit-card:hover {
-    transform: translateY(-5px);
-}
-
-/* =============================
-   CTA SECTION
-============================= */
-
-.cta-section {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(to right, #00b4d8, #0077b6);
     color: white;
+    padding: 20px;
 }
 
-.cta-buttons {
-    margin-top: 1.5rem;
+.hero-content {
+    max-width: 700px;
 }
 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.cta-button,
 .cta-button-large {
     display: inline-block;
-    margin: 0.5rem;
-    padding: 0.8rem 1.8rem;
-    background: white;
-    color: #0077b6;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.cta-button-large:hover {
-    background: #caf0f8;
-}
-
-/* =============================
-   FOOTER
-============================= */
-
-.footer {
-    background: linear-gradient(to right, #001d3d, #003566);
+    padding: 12px 25px;
+    background: var(--accent);
     color: white;
-    padding: 3rem 1rem 1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 10px;
+    transition: var(--transition);
+}
+
+.cta-button:hover,
+.cta-button-large:hover {
+    background: #009999;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   FEATURED SECTION
+======================================== */
+.featured-section {
+    background: var(--light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.fish-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.fish-card:hover {
+    transform: translateY(-10px);
+}
+
+.fish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+}
+
+.learn-more-btn,
+.view-all-btn,
+.btn-secondary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.learn-more-btn:hover,
+.view-all-btn:hover,
+.btn-secondary:hover {
+    background: var(--primary);
+}
+
+/* ========================================
+   COMPARISON SECTION
+======================================== */
+.comparison-section {
+    background: white;
+    text-align: center;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.comparison-item {
+    background: var(--light);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.benefits-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.benefits-list li {
+    margin: 10px 0;
+}
+
+/* ========================================
+   CTA SECTION
+======================================== */
+.cta-section {
+    background: linear-gradient(135deg, #0066cc, #00cccc);
+    color: white;
+    text-align: center;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.footer {
+    background: #001a33;
+    color: white;
+    padding: 50px 20px 20px;
 }
 
 .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
 }
 
 .footer-column h4 {
-    margin-bottom: 1rem;
-    color: #4dd0e1;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 15px;
 }
 
 .footer-column a {
-    color: white;
+    color: #00cccc;
     text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-column a:hover {
-    color: #4dd0e1;
-}
-
-.social-links a {
-    font-size: 1.2rem;
-    margin-right: 10px;
 }
 
 .footer-divider {
     height: 1px;
     background: rgba(255,255,255,0.2);
-    margin: 2rem 0 1rem;
+    margin: 30px 0;
 }
 
 .footer-bottom {
     text-align: center;
     font-size: 0.9rem;
-    opacity: 0.8;
 }
 
-/* =============================
-   BUBBLE BACKGROUND
-============================= */
-
+/* ========================================
+   BUBBLE ANIMATION
+======================================== */
 .bubble-container {
     position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
     overflow: hidden;
     z-index: -1;
 }
@@ -304,50 +303,38 @@ body {
 .bubble {
     position: absolute;
     bottom: -100px;
-    background: rgba(0, 180, 216, 0.2);
+    background: rgba(255,255,255,0.4);
     border-radius: 50%;
-    animation: rise 10s linear infinite;
+    animation: rise 15s infinite ease-in;
 }
 
 @keyframes rise {
-    to {
-        transform: translateY(-110vh);
-        opacity: 0;
-    }
+    0% { transform: translateY(0); opacity: 0.6; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-/* =============================
-   REVEAL ANIMATION
-============================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s ease;
+/* ========================================
+   FUN FISH CURSOR 🐟
+======================================== */
+body {
+    cursor: url('images/fish-cursor.png'), auto;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* =============================
-   RESPONSIVE DESIGN
-============================= */
-
+/* ========================================
+   RESPONSIVE
+======================================== */
 @media (max-width: 768px) {
 
     .nav-links {
         display: none;
     }
 
-    .hamburger {
-        display: flex;
-        cursor: pointer;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .page-header h1 {
-        font-size: 1.8rem;
+    .hero {
+        height: auto;
+        padding-top: 120px;
     }
-
 }
